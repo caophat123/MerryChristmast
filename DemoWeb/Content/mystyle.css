@@ -1,0 +1,474 @@
+﻿.container {
+    height: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, #0d1b2a, #1a2b3d);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: #0d1b2a;
+    font-family: 'Arial', sans-serif;
+}
+
+.bottom_snow {
+    position: absolute;
+    z-index: 5;
+    top: 400px;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    height: 1000px;
+    background: #e2e2e2;
+    border-radius: 1000px;
+}
+
+    .bottom_snow:before, .bottom_snow:after {
+        background-color: #fff;
+        content: "";
+        height: 1000px;
+        position: absolute;
+        top: -25px;
+        width: 1000px;
+        border-radius: 1000px;
+    }
+
+    .bottom_snow:before {
+        left: 400px;
+    }
+
+    .bottom_snow:after {
+        right: 400px;
+    }
+
+/* Cây thông chung cho tất cả các cây thông */
+.tree, .tree:before, .tree:after, .tree_bot, .tree_bot:before, .tree_bot:after {
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-radius: 40px;
+}
+
+/* Cây thông thứ nhất */
+.tree {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid green;
+    left: 390px;
+    top: 135px;
+}
+
+    .tree:before {
+        content: '';
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid green;
+        left: -40px;
+        top: 15px;
+    }
+
+    .tree:after {
+        content: '';
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid green;
+        left: -60px;
+        top: 40px;
+    }
+
+/* Phần dưới cây thông */
+.tree_bot {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid green;
+    left: 330px;
+    top: 210px;
+}
+
+    .tree_bot:before {
+        content: '';
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid green;
+        left: -100px;
+        top: 40px;
+    }
+
+    .tree_bot:after {
+        content: '';
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 120px solid green;
+        left: -120px;
+        top: 80px;
+    }
+
+/* Cây thông thứ hai (Tương tự cây thông thứ nhất) */
+.tree2 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid green;
+    left: 110px;
+    top: 135px;
+}
+
+    .tree2:before {
+        content: '';
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid green;
+        left: -40px;
+        top: 15px;
+    }
+
+    .tree2:after {
+        content: '';
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid green;
+        left: -60px;
+        top: 40px;
+    }
+
+.tree_bot2 {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid green;
+    left: 50px;
+    top: 210px;
+}
+
+    .tree_bot2:before {
+        content: '';
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid green;
+        left: -100px;
+        top: 40px;
+    }
+
+    .tree_bot2:after {
+        content: '';
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 120px solid green;
+        left: -120px;
+        top: 80px;
+    }
+
+/* Cây thông thứ ba (Tương tự cây thông thứ nhất) */
+.tree3 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid green;
+    left: 640px;
+    top: 135px;
+}
+
+    .tree3:before {
+        content: '';
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid green;
+        left: -40px;
+        top: 15px;
+    }
+
+    .tree3:after {
+        content: '';
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid green;
+        left: -60px;
+        top: 40px;
+    }
+
+.tree_bot3 {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid green;
+    left: 580px;
+    top: 210px;
+}
+
+    .tree_bot3:before {
+        content: '';
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid green;
+        left: -100px;
+        top: 40px;
+    }
+
+    .tree_bot3:after {
+        content: '';
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 120px solid green;
+        left: -120px;
+        top: 80px;
+    }
+
+/* Quả bóng cho cây thông */
+.ball {
+    height: 40px;
+    left: 390px;
+    position: absolute;
+    top: 345px;
+    width: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #777;
+    animation: blink 1s infinite alternate;
+}
+
+/* Quả bóng cho cây thông thứ hai */
+.ball2 {
+    height: 40px;
+    left: 120px;
+    position: absolute;
+    top: 345px;
+    width: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #777;
+    animation: blink 1s infinite alternate;
+}
+
+/* Quả bóng cho cây thông thứ ba */
+.ball3 {
+    height: 40px;
+    left: 650px;
+    position: absolute;
+    top: 345px;
+    width: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #777;
+    animation: blink 1s infinite alternate;
+}
+.ball4 {
+    height: 40px;
+    left: 390px;
+    position: absolute;
+    top: 345px;
+    width: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #777;
+    animation: blink 1s infinite alternate;
+}
+    .ball.red, .ball2.red, .ball3.red, .ball4.red {
+        background-color: red;
+    }
+
+    .ball.green, .ball2.green, .ball3.green, .ball4.green {
+        background-color: yellow;
+    }
+
+    .ball.blue, .ball2.blue, .ball3.blue, .ball4.blue {
+        background-color: blue;
+    }
+    .ball.pink, .ball2.pink, .ball3.pink, .ball4.pink {
+        background-color: deeppink;
+    }
+
+/* Quả bóng nhỏ cho các cây thông */
+.rsmall, .gsmall, .bsmall, .lsmall {
+    height: 25px;
+    width: 25px;
+}
+
+/* Quả bóng nhỏ cho cây thông thứ nhất */
+.rsmall {
+    left: 399px;
+    top: 120px;
+}
+
+.bsmall {
+    left: 350px;
+    top: 255px;
+}
+
+.gsmall {
+    left: 400px;
+    top: 275px;
+}
+.lsmall {
+    left: 410px;
+    top:220px;
+}
+
+/* Quả bóng nhỏ cho các cây thông khác */
+.rsmall.ball2, .rsmall.ball3 {
+    left: 160px;
+    top: 250px;
+}
+
+.bsmall.ball2, .bsmall.ball3 {
+    left: 90px;
+    top: 230px;
+}
+
+.gsmall.ball2, .gsmall.ball3 {
+    left: 120px;
+    top: 275px;
+}
+
+/* Hiệu ứng nhấp nháy cho quả bóng */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Văn bản "Happy Holidays" */
+.holiday-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: blinkText 1s infinite alternate;
+}
+
+@keyframes blinkText {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.holiday-text2 {
+
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: blinkText 1s infinite alternate;
+}
+
+@keyframes blinkText {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Snowfall effect */
+.fall_snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        left: 10%;
+        opacity: 1;
+    }
+
+    50% {
+        top: 50%;
+        left: 40%;
+        opacity: 0.7;
+    }
+
+    100% {
+        top: 100%;
+        left: 80%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Holiday Text */
+.holiday-text {
+    position: absolute;
+    font-size: 60px;
+    left: 1200px;
+    top: 100px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+.holiday-text2 {
+    position: absolute;
+    font-size: 50px;
+    left: 1200px;
+    top: 180px;
+    font-weight: bold;
+    text-shadow: 0 0 10px yellow, 0 0 20px green;
+    animation: glow 1.5s infinite alternate;
+    
+}
+
+@keyframes glow {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+
+
